@@ -1,33 +1,36 @@
 {
-  "name": "encoding",
+  "name": "aulalivre-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "APIs for Aulalivre's project",
+  "main": "src/server.js",
+  "author": "CXD.dev",
+  "license": "MIT",
   "scripts": {
-    "dev": "npm-run-all -p dev:*",
-    "dev:server": "nodemon src/server.js",
-    "start": "npm-run-all -p start:*",
-    "start:server": "sucrase-node src/server.js",
-    "start:queue": "sucrase-node src/queue.js"
+    "dev": "NODE_ENV=dev nodemon src/server.js",
+    "start": "sucrase-node src/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
   "dependencies": {
+    "@json2csv/plainjs": "^7.0.1",
+    "axios": "^1.2.4",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "fast-csv": "^4.3.6",
     "fs": "*",
-    "knex": "^2.4.2",
+    "generate-password": "^1.7.0",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.1",
+    "knex-paginate": "^3.1.1",
+    "md5": "^2.3.0",
     "moment": "^2.29.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "nodemailer": "^6.9.1",
-    "npm-run-all": "^4.1.5",
-    "sucrase": "^3.29.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemailer": "^6.9.0",
+    "pagarme": "^4.29.0",
+    "sucrase": "^3.29.0",
+    "yup": "^1.0.2"
   }
 }

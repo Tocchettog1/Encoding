@@ -1,2 +1,0 @@
-###
-GET http://localhost:4040/billing/dynamicInvoice
